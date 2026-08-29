@@ -1,4 +1,5 @@
 # .github/workflows/edge-deploy.yml
+# Pipeline CI/CD - nova execução
 # Pipeline completo: lint → testes → build ARM64 → quality gate → deploy
 
 name: Edge AI — Build, Test e Deploy
