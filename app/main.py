@@ -1,27 +1,25 @@
+import asyncio
 import base64
 import io
-import time
 import subprocess
-from pathlib import Path
-from fastapi import FastAPI, HTTPException, Response, Query
-from PIL import Image
-import numpy as np
-import httpx
+import time
+
 import cv2
-import asyncio
-
-
-from fastapi import FastAPI, HTTPException, Response, Query, Request
+import httpx
+import numpy as np
+from fastapi import FastAPI, HTTPException, Query, Request, Response
 from fastapi.responses import HTMLResponse, StreamingResponse
-
-
+from model import get_default_model_name, load_model
+from PIL import Image
 from schemas import (
-    PredictRequest, PredictResponse,
-    BatchPredictRequest, BatchPredictResponse,
-    HealthResponse, MetricsResponse, Detection
+    BatchPredictRequest,
+    BatchPredictResponse,
+    Detection,
+    HealthResponse,
+    MetricsResponse,
+    PredictRequest,
+    PredictResponse,
 )
-from model import load_model, get_default_model_name
-
 
 app = FastAPI(
     title="YOLO Inference API",
