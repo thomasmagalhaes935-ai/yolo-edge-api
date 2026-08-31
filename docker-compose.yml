@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.api
-    container_name: yolo-api
     ports:
       - "8000:8000"
     privileged: true             # Permite acesso aos nós de mídia e DMA da câmera
@@ -30,7 +29,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.client
-    container_name: yolo-client
     volumes:
       - ./images:/client/images:ro
       - ./output:/client/output
