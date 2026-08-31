@@ -1,4 +1,4 @@
-# .github/workflows/edge-deploy.yml
+# .github/workflows/edge-deploy.yml 
 # Pipeline CI/CD - nova execução
 # Pipeline completo: lint → testes → build ARM64 → quality gate → deploy
 
