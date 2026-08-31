@@ -187,7 +187,7 @@ jobs:
           command_timeout: 30m
           script: |
             export DEPLOY_PATH=${{ secrets.RPI_DEPLOY_PATH }}
-            cd $DEPLOY_PATH
+            cd "$DEPLOY_PATH"
             git pull origin main
             bash scripts/deploy.sh
 
