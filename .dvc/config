@@ -1,4 +1,4 @@
 [core]
     remote = local_remote
 ['remote "local_remote"']
-    url = ssh://thomasmagalhaes935@100.91.155.42/home/thomasmagalhaes935/dvc-storage
+    url = ssh://thomasmagalhaes935@00.91.155.42/home/thomasmagalhaes935/dvc-storage
